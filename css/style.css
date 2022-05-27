@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 140px auto 115px;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+}
+
+/* Estilos para el header y logo de marca*/
+.grid-container header {
+    background-color: #90BE6D;
+    grid-area: header;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    font-size: 0;
+    margin-bottom: 5px;
+}
+
+.header__logo img {
+    height: 60px;
+    margin: 5px 0px 0px 5px;
+}
+
+.header__logo h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 20px;
+    display: inline;
+}
+
+/* Estilos para barra de navegacion */
+.nav__bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__bar ul {
+    list-style-type: none;
+    font-style: normal;
+}
+
+.nav__bar ul li {
+    margin-bottom: 2px;
+}
+
+.nav__bar ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 0px 20px;
+    margin: 0px 20px;
+    color: black;
+}
+
+.nav__bar ul li a:hover {
+    background-color: whitesmoke;
+}
+
+.header__menu {
+    display: none;
+    font-size: 40px;
+    background: none;
+    border: none;
+    padding: 0 10px;
+    line-height: 60px;
+}
+
+/* estilos para el titulo, los parrafos y las imagenes*/
+.grid-container main {
+    grid-area: main;
+    background-color: ghostwhite;
+}
+
+.section__banner {
+    display: none;
+}
+
+h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.article__parrafo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    text-align: left;
+    line-height: 1.6;
+    margin: 20px 20px;
+    max-width: 650px;
+}
+
+.article__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+
+.article__images img {
+    width: 400px;
+    height: 250px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+
+/* Estilos para canchas.htlm */
+.contenedorCanchas {
+    text-align: center;
+    margin: 25px;
+}
+
+.article__canchas {
+    display: inline-block;
+    padding: 0px 30px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    list-style-type: none;
+    font-style: normal;
+    text-align: center;
+}
+
+.article__canchas li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    border-bottom: 1px solid #90BE6D;
+}
+
+/* Estilos para eventos.html */
+.article__eventos h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+/* Estilos para contacto.html */
+.formulario {
+    text-align: center;
+}
+
+/* Estilos para el footer y enlace a redes sociales */
+.grid-container footer {
+    background-color: #90BE6D;
+    width: 100%;
+    grid-area: footer;
+    align-items: end;
+}
+
+.footer__redes {
+    text-align: left;
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+.footer__redes i {
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.grid-container footer p {
+    font-family: 'Poppins', sans-serif;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+
+    .grid-container {
+        height: 100vh;
+        grid-template-rows: 140px auto 115px;
+    }
+
+    /* Estilos para el header y logo de marca*/
+    .header__menu {
+        display: none;
+    }
+
+    .header__logo img {
+        height: 120px;
+    }
+
+    .header__logo h2 {
+        font-size: 35px;
+        display: inline;
+    }
+
+    /* Estilos para la barra de navegacion */
+    .nav__bar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav__bar ul {
+        display: flex;
+        padding-left: 25px;
+    }
+
+    .nav__bar ul li {
+        display: inline;
+    }
+
+    .nav__bar ul li a {
+        border: 3px groove black;
+    }
+
+    /* se agrega banner en index */
+    .section__banner {
+        display: inline;
+        width: 100%;
+        height: 400px;
+    }
+
+    /* se acomodan las imagenes al lado del texto */
+    .article__parrafo {
+        display: inline-block;
+    }
+
+    .article__images {
+        display: inline-block;
+    }
+
+    /* Estilos para contacto.html */
+    .formulario {
+        text-align: left;
+    }
+
+    /* estilo para la galeria de imagenes */
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    /* Estilos para el footer y redes sociales */
+    .grid-container footer p {
+        font-size: 18px;
+    }
+
+    .footer__redes {
+        font-size: 45px;
+    }
+}
