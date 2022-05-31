@@ -6,7 +6,7 @@
 
 body {
     min-width: 100%;
-    /* min-height: 100%; */
+    min-height: 100%;
 }
 
 .grid-container {
@@ -71,7 +71,7 @@ body {
 }
 
 .nav__bar ul li a:hover {
-    background-color: whitesmoke;
+    background-image: linear-gradient(to bottom, #EC9F05, #F7F9F9); 
 }
 
 .header__menu {
@@ -262,6 +262,15 @@ h1 {
     }
 
     .footer__redes {
+        display: flex;
         font-size: 45px;
+    }
+
+    .footer__redes i{
+        transition: all 1.5s;
+    }
+    .footer__redes i:hover {
+        font-size: 55px;
+        color: whitesmoke;
     }
 }
