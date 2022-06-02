@@ -126,26 +126,36 @@ h1 {
     border-radius: 5%;
 }
 
-/* Estilos para canchas.htlm */
-.contenedorCanchas {
+/* Estilos para cards */
+.card {
+    background-color: #90BE6D;
+    width: 400px;
+    /* margin-left: 50px; */
+    margin-bottom: 15px;
     text-align: center;
-    margin: 25px;
+    font-family: 'Hammersmith One', sans-serif;
+    font-weight: bold;
 }
 
-.article__canchas {
-    display: inline-block;
-    padding: 0px 30px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    list-style-type: none;
-    font-style: normal;
-    text-align: center;
+.card-title {
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: 900;
 }
 
-.article__canchas li {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    border-bottom: 1px solid #90BE6D;
+.card-text {
+    font-size: 22px;
+}
+
+.card-link {
+    color: black;
+    transition: all 1s;
+}
+
+.card-link:hover {
+    color: #F1F2EE;
+    text-decoration: underline;
+    
 }
 
 /* Estilos para eventos.html */
@@ -160,10 +170,6 @@ h1 {
     display: none;
 }
 
-.contenedorEventos {
-    text-align: center;
-    margin: 25px;
-}
 
 .parrafo_eventos {
     font-family: 'Poppins', sans-serif;
@@ -173,22 +179,6 @@ h1 {
     line-height: 1.6;
     margin: 20px 20px;
     padding: 20px 12px;
-}
-
-.lista__eventos {
-    display: inline-block;
-    padding: 0px 30px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    list-style-type: none;
-    font-style: normal;
-    text-align: center;
-}
-
-.lista__eventos li {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    border-bottom: 1px solid #90BE6D;
 }
 
 /* Estilos para contacto.html */
@@ -322,7 +312,7 @@ h1 {
     .image_eventos img {
         display: inline-block;
         width: 600px;
-        height: 800px;
+        height: 700px;
     }
 
     .article__eventos {
@@ -343,13 +333,14 @@ h1 {
 
     /* Estilos para contacto.html */
     .formulario {
-        text-align: left;
+        text-align: center;
     }
 
     /* estilo para la galeria de imagenes */
 
     iframe {
-        width: 560px;
+        border: 2px solid black;
+        width: 460px;
         height: 315px;
     }
 
@@ -357,6 +348,7 @@ h1 {
     .grid-container footer p {
         font-size: 18px;
         margin-right: 100px;
+        margin-bottom: 0;
     }
 
     .footer__redes {
@@ -371,7 +363,6 @@ h1 {
     }
 
     .footer__redes i:hover {
-        font-size: 50px;
         color: whitesmoke;
     }
 }
