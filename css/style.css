@@ -89,8 +89,9 @@ body {
     background-color: ghostwhite;
 }
 
-.section__banner {
-    display: none;
+.img-fluid {
+    min-width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -155,7 +156,7 @@ h1 {
 .card-link:hover {
     color: #F1F2EE;
     text-decoration: underline;
-    
+
 }
 
 /* Estilos para eventos.html */
@@ -187,31 +188,34 @@ h1 {
     margin: 20px;
 }
 
+
+
 /* Estilos para el footer y enlace a redes sociales */
-.grid-container footer {
+.container-fluid {
     background-color: #90BE6D;
-    width: 100%;
     grid-area: footer;
-    align-items: end;
+}
+
+.col-3 {
+    text-align: center;
+}
+
+.col-3 img {
+    height: 70px;
+    margin: 10px 0px 0px 5px;
 }
 
 .footer__redes {
-    text-align: left;
-    margin-left: 5px;
-    font-size: 30px;
+    margin: 5px;
+    font-size: 35px;
 }
 
-.footer__redes i {
-    margin-top: 5px;
-    margin-left: 15px;
-}
-
-.grid-container footer p {
-    font-family: 'Poppins', sans-serif;
-    margin-right: 15px;
-    font-size: 18px;
+.col-3 p {
+    font-family: 'Hammersmith One', sans-serif;
+    margin: 10px;
+    font-size: 11px;
     font-weight: 900;
-    text-align: right;
+    text-align: left;
     font-weight: bold;
 }
 
@@ -291,6 +295,7 @@ h1 {
     }
 
     /* estilos para eventos.html */
+
     .container_eventos {
         display: flex;
         flex-direction: row;
@@ -332,6 +337,7 @@ h1 {
     }
 
     /* Estilos para contacto.html */
+
     .formulario {
         text-align: center;
     }
@@ -345,24 +351,41 @@ h1 {
     }
 
     /* Estilos para el footer y redes sociales */
-    .grid-container footer p {
-        font-size: 18px;
-        margin-right: 100px;
-        margin-bottom: 0;
+
+
+    .container-fluid {
+        background-color: #90BE6D;
+        grid-area: footer;
     }
 
     .footer__redes {
         display: flex;
         font-size: 45px;
-        margin-left: 100px;
+        margin-right: 50px;
     }
 
     .footer__redes i {
-        padding-left: 15px;
+        padding: 15px;
         transition: all 1.5s;
     }
 
     .footer__redes i:hover {
         color: whitesmoke;
+    }
+
+    .col-3 {
+        text-align: center;
+    }
+    .col-3 img {
+        height: 100px;
+    }
+
+    .col-3 p {
+        font-family: 'Poppins', sans-serif;
+        margin-right: 15px;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: right;
+        font-weight: bold;
     }
 }
