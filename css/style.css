@@ -12,7 +12,7 @@ body {
 .grid-container {
     height: 100vh;
     display: grid;
-    grid-template-rows: 140px auto 115px;
+    grid-template-rows: 140px auto auto;
     grid-template-areas:
         'header'
         'main'
