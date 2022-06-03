@@ -124,7 +124,19 @@ h1 {
     width: 450px;
     height: 300px;
     padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5%;
+}
+
+.article__images iframe {
+    width: 450px;
+    height: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.img-thumbnail {
+    background-color: #90BE6D;
 }
 
 /* Estilos para cards */
@@ -183,12 +195,10 @@ h1 {
 }
 
 /* Estilos para contacto.html */
-
 .mb-3 {
     max-width: 50%;
     margin-left: 30%;
 }
-
 
 
 /* Estilos para el footer y enlace a redes sociales */
@@ -286,6 +296,17 @@ h1 {
         height: 300px;
         padding: 10px;
         border-radius: 5%;
+    }
+
+    .article__images iframe {
+        width: 450px;
+        height: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .img-thumbnail {
+        background-color: #90BE6D;
     }
 
     /* estilos para eventos.html */
