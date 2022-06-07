@@ -180,6 +180,7 @@ footer {
     font-weight: bold;
 }
 
+
 @media screen and (min-width: 768px) {
 
     body {
@@ -292,7 +293,7 @@ footer {
 
 
     /* Estilos para el footer y redes sociales */
-    footer {
+     footer {
         background-color: #90BE6D;
         margin-top: auto;
     }
