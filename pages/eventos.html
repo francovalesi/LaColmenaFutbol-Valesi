@@ -18,104 +18,110 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <header>
-            <div class="header__logo">
-                <img src="../images/logo_colmena_negro.png" alt="Logo de marca">
-                <h2>LaColmena Futbol</h2>
-            </div>
-            <button class="header__menu"><i class='bx bx-menu'></i></button>
-            <nav class="nav__bar">
-                <ul>
-                    <li><a href="../index.html">Nosotros</a></li>
-                    <li><a href="./canchas.html">Canchas</a></li>
-                    <li><a href="./eventos.html">Eventos</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                    <li><a href="./galeria.html">Galeria</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <h1>Eventos</h1>
-                <div class="container_eventos">
-                    <div class="image_eventos">
-                        <img src="../images/nenes_pelota.png" alt="chicos jugando">
+    <header class="row justify-content-around">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid col-8">
+                <img src="../images/logo_marca_negro.png" alt="Logo de marca"
+                    class="logo-marca d-inline-block align-text-top">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Nosotros</a>
+                        <a class="nav-link" href="./canchas.html">Canchas</a>
+                        <a class="nav-link" href="./eventos.html">Eventos</a>
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        <a class="nav-link" href="./galeria.html">Galeria</a>
                     </div>
-                    <article class="article__eventos">
-                        <div class="parrafo_eventos">
-                            <h3 class="title_eventos">Festeja tu cumpleaños jugando</h3>
-                            <p>En el predio tenemos diferentes opciones para que pases un día inolvidable junto a tus
-                                amigos,
-                                familiares
-                                o compañeros de trabajo. Contamos con un amplio sector de quinchos y parrillas aptos
-                                para
-                                cualquier
-                                evento.</p><br>
-                            <p>
-                                Asistencia médica y seguridad las 24 horas en el predio.
-                            </p>
-                        </div>
-                        <div class="container">
-                            <div class="row justify-content-around">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">15 personas</h5>
-                                        <p class="card-text">$17.000</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">15 panchos</li>
-                                        <li class="list-group-item">Snaks</li>
-                                        <li class="list-group-item">10 gaseosas</li>
-                                        <li class="list-group-item">2 horas de cancha</li>
-                                        <li class="list-group-item">Adicional opcion hamburguesas: $2.000</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="./contacto.html" class="card-link">RESERVAR</a>
-                                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Eventos</h1>
+            <div class="container_eventos">
+                <div class="image_eventos">
+                    <img src="../images/nenes_pelota.png" alt="chicos jugando">
+                </div>
+                <article class="article__eventos">
+                    <div class="parrafo_eventos">
+                        <h3 class="title_eventos">Festeja tu cumpleaños jugando</h3>
+                        <p>En el predio tenemos diferentes opciones para que pases un día inolvidable junto a tus
+                            amigos,
+                            familiares
+                            o compañeros de trabajo. Contamos con un amplio sector de quinchos y parrillas aptos
+                            para
+                            cualquier
+                            evento.</p><br>
+                        <p>
+                            Asistencia médica y seguridad las 24 horas en el predio.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-around">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">15 personas</h5>
+                                    <p class="card-text">$17.000</p>
                                 </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">25 personas</h5>
-                                        <p class="card-text">$23.000</p>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">25 panchos</li>
-                                        <li class="list-group-item">Snaks</li>
-                                        <li class="list-group-item">17 gaseosas</li>
-                                        <li class="list-group-item">2 horas de cancha</li>
-                                        <li class="list-group-item">Adicional opcion hamburguesas: $3.000</li>
-                                    </ul>
-                                    <div class="card-body">
-                                        <a href="./contacto.html" class="card-link">RESERVAR</a>
-                                    </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">15 panchos</li>
+                                    <li class="list-group-item">Snaks</li>
+                                    <li class="list-group-item">10 gaseosas</li>
+                                    <li class="list-group-item">2 horas de cancha</li>
+                                    <li class="list-group-item">Adicional opcion hamburguesas: $2.000</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./contacto.html" class="card-link">RESERVAR</a>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">25 personas</h5>
+                                    <p class="card-text">$23.000</p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">25 panchos</li>
+                                    <li class="list-group-item">Snaks</li>
+                                    <li class="list-group-item">17 gaseosas</li>
+                                    <li class="list-group-item">2 horas de cancha</li>
+                                    <li class="list-group-item">Adicional opcion hamburguesas: $3.000</li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./contacto.html" class="card-link">RESERVAR</a>
                                 </div>
                             </div>
                         </div>
-                    </article>
-                </div>
-            </section>
-        </main>
-        <footer class="container-fluid">
-            <div class="row justify-content-around">
-                <div class="col-3">
-                    <div class="footer__redes">
-                        <i class='bx bxl-facebook-square'></i>
-                        <i class='bx bxl-instagram'></i>
-                        <i class='bx bxl-twitter'></i>
-                        <i class='bx bx-envelope'></i>
                     </div>
-                </div>
-                <div class="col-3">
-                    <img src="../images/logo_colmena_blanco.png" alt="logo de marca">
-                </div>
-                <div class="col-3">
-                    <p><small>Copyright © 2022</small></p>
-                    <p><small>LaColmenaFutbol | Creado por Franco Valesi</small></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="row justify-content-around">
+            <div class="col-3">
+                <div class="footer__redes">
+                    <i class='bx bxl-facebook-square'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-twitter'></i>
+                    <i class='bx bx-envelope'></i>
                 </div>
             </div>
-        </footer>
-    </div>
+            <div class="col-3">
+                <img src="../images/logo_colmena_blanco.png" alt="logo de marca">
+            </div>
+            <div class="col-3">
+                <p><small>Copyright © 2022</small></p>
+                <p><small>LaColmenaFutbol | Creado por Franco Valesi</small></p>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
