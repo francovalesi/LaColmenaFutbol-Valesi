@@ -144,11 +144,10 @@ h1 {
     padding: 20px 12px;
 }
 
-/* Estilos para contacto.html */
-.mb-3 {
-    max-width: 50%;
-    margin-left: 30%;
-}
+    /* Estilo para contactos.html */
+    .btn__section {
+        text-align: center;
+    }
 
 
 /* Estilos para el footer y enlace a redes sociales */
@@ -279,6 +278,17 @@ footer {
         padding: 20px 12px;
     }
 
+
+    /* Estilo para contactos.html */
+    .form-control {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .btn__section {
+        text-align: center;
+    }
+
     /* estilo para la galeria de imagenes */
     iframe {
         width: 460px;
@@ -301,7 +311,6 @@ footer {
 
     .footer__redes i {
         padding: 15px;
-        transition: all 1.5s;
     }
 
     .footer__redes i:hover {
