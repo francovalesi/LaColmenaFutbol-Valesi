@@ -23,7 +23,7 @@ body {
     align-items: center;
 }
 
-.navbar-nav a{
+.nav-link{
     color: black;
     font-weight: bold;
     font-size: 20px;
@@ -41,7 +41,7 @@ main {
 }
 
 .img-fluid {
-    min-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -93,7 +93,7 @@ h1 {
 /* Estilos para cards */
 .card {
     background-color: #90BE6D;
-    width: 400px;
+    width: 380px;
     margin-bottom: 15px;
     text-align: center;
     font-family: 'Hammersmith One', sans-serif;
@@ -157,26 +157,20 @@ footer {
     margin-top: auto;
 }
 
-.col-3 {
-    text-align: center;
-}
-
-.col-3 img {
-    height: 70px;
-    margin: 10px 0px 0px 5px;
-}
-
 .footer__redes {
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 0px 5px;
+    padding-bottom: 5px;
     font-size: 35px;
 }
 
-.col-3 p {
+.footer__copy p {
     font-family: 'Hammersmith One', sans-serif;
     margin: 10px;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 900;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -194,7 +188,7 @@ footer {
 
 
     /* Estilos para la barra de navegacion */
-    .navbar-nav a{
+    .nav-link{
         color: black;
         font-weight: bold;
         font-size: 28px;
@@ -203,7 +197,7 @@ footer {
         margin: 5px;
     }
 
-    .navbar-nav a:hover {
+    .nav-link:hover {
         text-decoration: underline;
     }
 
@@ -300,6 +294,7 @@ footer {
 
     .footer__redes {
         display: flex;
+        flex-direction: row;
         font-size: 45px;
         margin-right: 50px;
     }
@@ -313,14 +308,7 @@ footer {
         color: whitesmoke;
     }
 
-    .col-3 {
-        text-align: center;
-    }
-    .col-3 img {
-        height: 100px;
-    }
-
-    .col-3 p {
+    .footer__copy p {
         font-family: 'Poppins', sans-serif;
         margin-right: 15px;
         font-size: 20px;
