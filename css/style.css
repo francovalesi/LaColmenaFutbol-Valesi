@@ -23,7 +23,7 @@ body {
     align-items: center;
 }
 
-.nav-link{
+.nav-link {
     color: black;
     font-weight: bold;
     font-size: 20px;
@@ -144,10 +144,110 @@ h1 {
     padding: 20px 12px;
 }
 
-    /* Estilo para contactos.html */
-    .btn__section {
-        text-align: center;
-    }
+/* Estilo para contactos.html */
+.btn__section {
+    text-align: center;
+}
+
+/* Estilos para galeria.html */
+
+.gallery {
+    padding-bottom: 3em;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+    grid-template-areas:
+        "img1 img1"
+        "img1 img1"
+        "img2 img3"
+        "img2 img3"
+        "img4 img4"
+        "img4 img4"
+        "img5 img5"
+        "img5 img5"
+        "img6 img7"
+        "img8 img8"
+        "img9 img9"
+        "img9 img9"
+        "img10 img10"
+        "img10 img10";
+    gap: .8em;
+}
+
+.gallery_picture {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery_picture::before {
+    content: "Visitanos!";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #90BE6D;
+    opacity: 0.7;
+    transform: scale(0);
+    transition: transform .4s;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.gallery_picture:hover::before {
+    transform: scale(1) rotate(360deg);
+}
+
+.gallery_picture--g1 {
+    grid-area: img1;
+}
+
+.gallery_picture--g2 {
+    grid-area: img2;
+}
+
+.gallery_picture--g3 {
+    grid-area: img3;
+}
+
+.gallery_picture--g4 {
+    grid-area: img4;
+}
+
+.gallery_picture--g5 {
+    grid-area: img5;
+}
+
+.gallery_picture--g6 {
+    grid-area: img6;
+}
+
+.gallery_picture--g7 {
+    grid-area: img7;
+}
+
+.gallery_picture--g8 {
+    grid-area: img8;
+}
+
+.gallery_picture--g9 {
+    grid-area: img9;
+}
+
+.gallery_picture--g10 {
+    grid-area: img10;
+}
+
+.gallery_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* Estilos para el footer y enlace a redes sociales */
@@ -187,7 +287,7 @@ footer {
 
 
     /* Estilos para la barra de navegacion */
-    .nav-link{
+    .nav-link {
         color: black;
         font-weight: bold;
         font-size: 28px;
@@ -231,7 +331,7 @@ footer {
         padding: 10px;
         margin-bottom: 10px;
     }
-    
+
     .img-thumbnail {
         background-color: #90BE6D;
     }
@@ -289,15 +389,99 @@ footer {
         text-align: center;
     }
 
-    /* estilo para la galeria de imagenes */
-    iframe {
-        width: 460px;
-        height: 315px;
+    /* Estilos para galeria.html */
+    .gallery {
+        padding-bottom: 3em;
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 160px;
+        grid-template-areas:
+            "img1 img1 img2 img3"
+            "img1 img1 img4 img4"
+            "img5 img5 img6 img7"
+            "img5 img5 img8 img8"
+            "img9 img9 img10 img10"
+            "img9 img9 img10 img10";
+        gap: .8em;
     }
 
+    .gallery_picture {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .gallery_picture::before {
+        content: "Visitanos!";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #90BE6D;
+        opacity: 0.7;
+        transform: scale(0);
+        transition: transform .4s;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .gallery_picture:hover::before {
+        transform: scale(1) rotate(360deg);
+    }
+
+    .gallery_picture--g1 {
+        grid-area: img1;
+    }
+
+    .gallery_picture--g2 {
+        grid-area: img2;
+    }
+
+    .gallery_picture--g3 {
+        grid-area: img3;
+    }
+
+    .gallery_picture--g4 {
+        grid-area: img4;
+    }
+
+    .gallery_picture--g5 {
+        grid-area: img5;
+    }
+
+    .gallery_picture--g6 {
+        grid-area: img6;
+    }
+
+    .gallery_picture--g7 {
+        grid-area: img7;
+    }
+
+    .gallery_picture--g8 {
+        grid-area: img8;
+    }
+
+    .gallery_picture--g9 {
+        grid-area: img9;
+    }
+
+    .gallery_picture--g10 {
+        grid-area: img10;
+    }
+
+    .gallery_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     /* Estilos para el footer y redes sociales */
-     footer {
+    footer {
         background-color: #90BE6D;
         margin-top: auto;
     }
