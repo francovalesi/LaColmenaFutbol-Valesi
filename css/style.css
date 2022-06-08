@@ -13,7 +13,6 @@ body {
 }
 
 /* Estilos para el header y logo de marca*/
-
 .navbar {
     background-color: #90BE6D;
     color: #000;
@@ -150,7 +149,6 @@ h1 {
 }
 
 /* Estilos para galeria.html */
-
 .gallery {
     padding-bottom: 3em;
     padding-top: 1em;
@@ -283,9 +281,6 @@ footer {
         grid-template-rows: auto 1fr auto;
     }
 
-    /* Estilos para el header y logo de marca*/
-
-
     /* Estilos para la barra de navegacion */
     .nav-link {
         color: black;
@@ -352,7 +347,6 @@ footer {
     } 
 
     /* estilos para eventos.html */
-
     .container_eventos {
         display: flex;
         flex-direction: row;
