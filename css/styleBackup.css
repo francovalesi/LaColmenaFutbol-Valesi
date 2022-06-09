@@ -13,16 +13,16 @@ body {
 }
 
 /* Estilos para el header y logo de marca*/
-.navbar {
+.navbar__header {
     background-color: #90BE6D;
     color: #000;
 }
 
-.navbar-nav {
+.container__navbar {
     align-items: center;
 }
 
-.nav-link {
+.links__navbar {
     color: black;
     font-weight: bold;
     font-size: 20px;
@@ -39,7 +39,7 @@ main {
     background-color: ghostwhite;
 }
 
-.img-fluid {
+.banner__main {
     width: 100%;
     height: auto;
 }
@@ -85,12 +85,8 @@ h1 {
     margin-bottom: 10px;
 }
 
-.img-thumbnail {
-    background-color: #90BE6D;
-}
-
 /* Estilos para cards */
-.card {
+.card__section {
     background-color: #90BE6D;
     width: 380px;
     margin-bottom: 15px;
@@ -99,22 +95,22 @@ h1 {
     font-weight: bold;
 }
 
-.card-title {
+.title__card {
     text-decoration: underline;
     font-size: 25px;
     font-weight: 900;
 }
 
-.card-text {
+.text__card {
     font-size: 22px;
 }
 
-.card-link {
+.link__card {
     color: black;
     transition: all 1s;
 }
 
-.card-link:hover {
+.link__card:hover {
     color: #F1F2EE;
     text-decoration: underline;
 
@@ -282,7 +278,7 @@ footer {
     }
 
     /* Estilos para la barra de navegacion */
-    .nav-link {
+    .links__navbar {
         color: black;
         font-weight: bold;
         font-size: 28px;
@@ -291,7 +287,7 @@ footer {
         margin: 5px;
     }
 
-    .nav-link:hover {
+    .links__navbar:hover {
         text-decoration: underline;
     }
 
@@ -338,11 +334,8 @@ footer {
         margin-bottom: 10px;
     }
 
-    .img-thumbnail {
-        background-color: #90BE6D;
-    }
 
-    .img-fluid:hover {
+    .banner__main:hover {
         filter: saturate(180%);
     } 
 
@@ -389,7 +382,7 @@ footer {
 
 
     /* Estilo para contactos.html */
-    .form-control {
+    .form__input {
         width: 500px;
         margin: 0 auto;
     }
