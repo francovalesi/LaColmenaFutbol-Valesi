@@ -1,0 +1,522 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-width: 100%;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Estilos para el header y logo de marca*/
+.navbar__header {
+    background-color: $color-fondo;
+    color: #000;
+
+    .container__navbar {
+        align-items: center;
+    }
+
+    .links__navbar {
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    .logo-marca {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* estilos para el titulo, los parrafos y las imagenes*/
+main {
+    background-color: ghostwhite;
+
+    .banner__main {
+        width: 100%;
+        height: auto;
+    }
+}
+
+h1 {
+    font-family: $font-titles;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+.article__parrafo {
+    font-family: $font-text;
+    font-size: 17px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.6;
+    margin: 20px 20px;
+    padding: 20px 12px;
+}
+
+.article__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+    img {
+        width: 450px;
+        height: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5%;
+    }
+
+    iframe {
+        width: 450px;
+        height: 300px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Estilos para cards */
+.card__section {
+    background-color: $color-fondo;
+    width: 380px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: $font-titles;
+    font-weight: bold;
+
+    .title__card {
+        text-decoration: underline;
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    .text__card {
+        font-size: 22px;
+    }
+
+    .link__card {
+        color: black;
+        transition: all 1s;
+
+        &:hover {
+            color: #F1F2EE;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Estilos para eventos.html */
+.title_eventos {
+    font-family: $font-titles;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px;
+    text-align: center;
+}
+
+.image_eventos {
+    img {
+        display: none;
+    }
+}
+
+.parrafo_eventos {
+    margin: 20px 20px;
+    padding: 20px 12px;
+
+    p {
+        font-family: $font-text;
+        font-size: 17px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+/* Estilo para contactos.html */
+.btn__section {
+    text-align: center;
+}
+
+/* Estilos para galeria.html */
+.gallery {
+    padding-bottom: 3em;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+    grid-template-areas:
+        "img1 img1"
+        "img1 img1"
+        "img2 img3"
+        "img2 img3"
+        "img4 img4"
+        "img4 img4"
+        "img5 img5"
+        "img5 img5"
+        "img6 img7"
+        "img8 img8"
+        "img9 img9"
+        "img9 img9"
+        "img10 img10"
+        "img10 img10";
+    gap: .8em;
+
+    .gallery_picture {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        &::before {
+            content: "Visitanos!";
+            font-family: $font-titles;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $color-fondo;
+            opacity: 0.7;
+            transform: scale(0);
+            transition: transform .4s;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        &:hover::before {
+            transform: scale(1) rotate(360deg);
+        }
+    }
+
+    .gallery_picture--g1 {
+        grid-area: img1;
+    }
+
+    .gallery_picture--g2 {
+        grid-area: img2;
+    }
+
+    .gallery_picture--g3 {
+        grid-area: img3;
+    }
+
+    .gallery_picture--g4 {
+        grid-area: img4;
+    }
+
+    .gallery_picture--g5 {
+        grid-area: img5;
+    }
+
+    .gallery_picture--g6 {
+        grid-area: img6;
+    }
+
+    .gallery_picture--g7 {
+        grid-area: img7;
+    }
+
+    .gallery_picture--g8 {
+        grid-area: img8;
+    }
+
+    .gallery_picture--g9 {
+        grid-area: img9;
+    }
+
+    .gallery_picture--g10 {
+        grid-area: img10;
+    }
+
+    .gallery_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Estilos para el footer y enlace a redes sociales */
+footer {
+    background-color: $color-fondo;
+    margin-top: auto;
+
+    .footer__redes {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px 0px 5px;
+        padding-bottom: 5px;
+        font-size: 35px;
+    }
+
+    .footer__copy {
+        p {
+            font-family: $font-titles;
+            margin: 10px;
+            font-size: 12px;
+            font-weight: 900;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        display: grid;
+        min-width: 100%;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    /* Estilos para la barra de navegacion */
+    .container__navbar {
+        .links__navbar {
+            color: black;
+            font-weight: bold;
+            font-size: 28px;
+            text-decoration: none;
+            padding: 1px;
+            margin: 5px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* se estila y acomodan las imagenes al lado del texto */
+    .article__container {
+        display: flex;
+        justify-content: space-around;
+
+        .article__parrafo {
+            display: inline-block;
+            text-align: left;
+            margin: 20px 20px;
+            padding: 20px 12px;
+            width: 35%;
+        }
+    }
+
+    .article__images {
+        display: inline-block;
+
+        img {
+            width: 450px;
+            height: 300px;
+            padding: 10px;
+            border-radius: 5%;
+            transition: all .5s;
+
+            &:hover {
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                box-shadow: 0px 0px 15px 15px #90BE6D;
+                -webkit-box-shadow: 0px 0px 15px 15px #90BE6D;
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        iframe {
+            width: 450px;
+            height: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .banner__main:hover {
+        filter: saturate(180%);
+    }
+
+    /* estilos para eventos.html */
+    .container_eventos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .title_eventos {
+            display: inline-block;
+            text-align: start;
+        }
+
+        .image_eventos {
+            display: inline-block;
+            width: 600px;
+            height: 800px;
+            margin: 20px;
+
+            img {
+                display: inline-block;
+                width: 550px;
+                height: 700px;
+            }
+        }
+
+        .article__eventos {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .parrafo_eventos {
+            font-family: $font-text;
+            text-align: left;
+            font-size: 17px;
+            font-weight: 900;
+            line-height: 1.6;
+            margin: 20px 20px;
+            padding: 20px 12px;
+        }
+    }
+
+    /* Estilo para contactos.html */
+    .form__input {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .btn__section {
+        text-align: center;
+    }
+
+    /* Estilos para galeria.html */
+    .gallery {
+        padding-bottom: 3em;
+        padding-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 160px;
+        grid-template-areas:
+            "img1 img1 img2 img3"
+            "img1 img1 img4 img4"
+            "img5 img5 img6 img7"
+            "img5 img5 img8 img8"
+            "img9 img9 img10 img10"
+            "img9 img9 img10 img10";
+        gap: .8em;
+
+        .gallery_picture {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+
+            &::before {
+                content: "Visitanos!";
+                font-family: $font-titles;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: $color-fondo;
+                opacity: 0.7;
+                transform: scale(0);
+                transition: transform .4s;
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+            }
+
+            &:hover::before {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+
+        .gallery_picture--g1 {
+            grid-area: img1;
+        }
+
+        .gallery_picture--g2 {
+            grid-area: img2;
+        }
+
+        .gallery_picture--g3 {
+            grid-area: img3;
+        }
+
+        .gallery_picture--g4 {
+            grid-area: img4;
+        }
+
+        .gallery_picture--g5 {
+            grid-area: img5;
+        }
+
+        .gallery_picture--g6 {
+            grid-area: img6;
+        }
+
+        .gallery_picture--g7 {
+            grid-area: img7;
+        }
+
+        .gallery_picture--g8 {
+            grid-area: img8;
+        }
+
+        .gallery_picture--g9 {
+            grid-area: img9;
+        }
+
+        .gallery_picture--g10 {
+            grid-area: img10;
+        }
+
+        .gallery_img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* Estilos para el footer y redes sociales */
+    footer {
+        background-color: $color-fondo;
+        margin-top: auto;
+
+        .footer__redes {
+            display: flex;
+            flex-direction: row;
+            font-size: 45px;
+            margin-left: 50px;
+
+            i {
+                padding: 15px;
+
+                &:hover {
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        .footer__copy {
+            p {
+                font-family: $font-text;
+                margin-right: 50px;
+                font-size: 20px;
+                font-weight: 900;
+                text-align: right;
+                font-weight: bold;
+            }
+        }
+    }
+}
