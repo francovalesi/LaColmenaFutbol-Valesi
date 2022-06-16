@@ -186,7 +186,7 @@ footer {
     text-align: center;
     font-weight: bold; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body {
     display: grid;
     min-width: 100%;
@@ -336,8 +336,14 @@ footer {
       margin-left: 50px; }
       footer .footer__redes i {
         padding: 15px; }
-        footer .footer__redes i:hover {
-          color: whitesmoke; }
+      footer .footer__redes .btn--facebook:hover {
+        color: #3b5998; }
+      footer .footer__redes .btn--twitter:hover {
+        color: #00acee; }
+      footer .footer__redes .btn--instagram:hover {
+        color: #dd2a7b; }
+      footer .footer__redes .btn--email:hover {
+        color: #BBDA12; }
     footer .footer__copy p {
       font-family: "Poppins", sans-serif;
       margin-right: 50px;

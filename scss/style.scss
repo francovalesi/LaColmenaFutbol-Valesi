@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 * {
     margin: 0;
@@ -15,7 +16,7 @@ body {
 
 /* Estilos para el header y logo de marca*/
 .navbar__header {
-    background-color: $color-fondo;
+    background-color: $color-principal;
     color: #000;
 
     .container__navbar {
@@ -30,18 +31,16 @@ body {
     }
 
     .logo-marca {
-        width: 150px;
-        height: 150px;
+        @include sizes(150px, 150px);
     }
 }
 
 /* estilos para el titulo, los parrafos y las imagenes*/
 main {
-    background-color: ghostwhite;
+    background-color: $color-secundario;
 
     .banner__main {
-        width: 100%;
-        height: auto;
+        @include sizes(100%, auto);
     }
 }
 
@@ -59,7 +58,7 @@ h1 {
     font-size: 17px;
     font-weight: 900;
     text-align: center;
-    line-height: 1.6;
+    line-height: map-get($estilos, interlineado);
     margin: 20px 20px;
     padding: 20px 12px;
 }
@@ -71,16 +70,14 @@ h1 {
     margin: 20px;
 
     img {
-        width: 450px;
-        height: 300px;
+        @include sizes(450px, 300px);
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 5%;
     }
 
     iframe {
-        width: 450px;
-        height: 300px;
+        @include sizes(450px, 300px);
         padding: 10px;
         margin-bottom: 10px;
     }
@@ -88,7 +85,7 @@ h1 {
 
 /* Estilos para cards */
 .card__section {
-    background-color: $color-fondo;
+    background-color: $color-principal;
     width: 380px;
     margin-bottom: 15px;
     text-align: center;
@@ -96,7 +93,7 @@ h1 {
     font-weight: bold;
 
     .title__card {
-        text-decoration: underline;
+        text-decoration: map-get($estilos, tDecoration);
         font-size: 25px;
         font-weight: 900;
     }
@@ -111,7 +108,7 @@ h1 {
 
         &:hover {
             color: #F1F2EE;
-            text-decoration: underline;
+            text-decoration: map-get($estilos, tDecoration);
         }
     }
 }
@@ -140,7 +137,7 @@ h1 {
         font-size: 17px;
         font-weight: 900;
         text-align: center;
-        line-height: 1.6;
+        line-height: map-get($estilos, interlineado);
     }
 }
 
@@ -186,7 +183,7 @@ h1 {
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: $color-fondo;
+            background-color: $color-principal;
             opacity: 0.7;
             transform: scale(0);
             transition: transform .4s;
@@ -202,56 +199,21 @@ h1 {
         }
     }
 
-    .gallery_picture--g1 {
-        grid-area: img1;
-    }
-
-    .gallery_picture--g2 {
-        grid-area: img2;
-    }
-
-    .gallery_picture--g3 {
-        grid-area: img3;
-    }
-
-    .gallery_picture--g4 {
-        grid-area: img4;
-    }
-
-    .gallery_picture--g5 {
-        grid-area: img5;
-    }
-
-    .gallery_picture--g6 {
-        grid-area: img6;
-    }
-
-    .gallery_picture--g7 {
-        grid-area: img7;
-    }
-
-    .gallery_picture--g8 {
-        grid-area: img8;
-    }
-
-    .gallery_picture--g9 {
-        grid-area: img9;
-    }
-
-    .gallery_picture--g10 {
-        grid-area: img10;
+    @for $i from 1 through 10 {
+        .gallery_picture--g#{$i} {
+            grid-area: img+$i;
+        }
     }
 
     .gallery_img {
-        width: 100%;
-        height: 100%;
+        @include sizes(100%, 100%);
         object-fit: cover;
     }
 }
 
 /* Estilos para el footer y enlace a redes sociales */
 footer {
-    background-color: $color-fondo;
+    background-color: $color-principal;
     margin-top: auto;
 
     .footer__redes {
@@ -274,7 +236,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
     body {
         display: grid;
@@ -317,8 +279,7 @@ footer {
         display: inline-block;
 
         img {
-            width: 450px;
-            height: 300px;
+            @include sizes(450px, 300px);
             padding: 10px;
             border-radius: 5%;
             transition: all .5s;
@@ -334,8 +295,7 @@ footer {
         }
 
         iframe {
-            width: 450px;
-            height: 300px;
+            @include sizes(450px, 300px);
             padding: 10px;
             margin-bottom: 10px;
         }
@@ -358,14 +318,12 @@ footer {
 
         .image_eventos {
             display: inline-block;
-            width: 600px;
-            height: 800px;
+            @include sizes(600px, 800px);
             margin: 20px;
 
             img {
                 display: inline-block;
-                width: 550px;
-                height: 700px;
+                @include sizes(550px, 700px);
             }
         }
 
@@ -380,7 +338,7 @@ footer {
             text-align: left;
             font-size: 17px;
             font-weight: 900;
-            line-height: 1.6;
+            line-height: map-get($estilos, interlineado);
             margin: 20px 20px;
             padding: 20px 12px;
         }
@@ -425,7 +383,7 @@ footer {
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-color: $color-fondo;
+                background-color: $color-principal;
                 opacity: 0.7;
                 transform: scale(0);
                 transition: transform .4s;
@@ -441,56 +399,21 @@ footer {
             }
         }
 
-        .gallery_picture--g1 {
-            grid-area: img1;
-        }
-
-        .gallery_picture--g2 {
-            grid-area: img2;
-        }
-
-        .gallery_picture--g3 {
-            grid-area: img3;
-        }
-
-        .gallery_picture--g4 {
-            grid-area: img4;
-        }
-
-        .gallery_picture--g5 {
-            grid-area: img5;
-        }
-
-        .gallery_picture--g6 {
-            grid-area: img6;
-        }
-
-        .gallery_picture--g7 {
-            grid-area: img7;
-        }
-
-        .gallery_picture--g8 {
-            grid-area: img8;
-        }
-
-        .gallery_picture--g9 {
-            grid-area: img9;
-        }
-
-        .gallery_picture--g10 {
-            grid-area: img10;
+        @for $i from 1 through 10 {
+            .gallery_picture--g#{$i} {
+                grid-area: img+$i;
+            }
         }
 
         .gallery_img {
-            width: 100%;
-            height: 100%;
+            @include sizes(100%, 100%);
             object-fit: cover;
         }
     }
 
     /* Estilos para el footer y redes sociales */
     footer {
-        background-color: $color-fondo;
+        background-color: $color-principal;
         margin-top: auto;
 
         .footer__redes {
@@ -501,9 +424,12 @@ footer {
 
             i {
                 padding: 15px;
+            }
 
-                &:hover {
-                    color: whitesmoke;
+            @each $redSocial,
+            $valor in $colores-redes {
+                .btn--#{$redSocial}:hover {
+                    color: $valor;
                 }
             }
         }
