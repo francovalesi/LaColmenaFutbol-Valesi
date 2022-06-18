@@ -5,19 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactate con nosotros para poder realizar reservas y sugerencias para cualquiera de nuestros espacios.">
+    <meta name="description"
+        content="Contactate con nosotros para poder realizar reservas y sugerencias para cualquiera de nuestros espacios.">
     <meta name="keywords"
         content="futbol, alquiler, canchas, sintetico, lacolmena, eventos, cumpleaños, alquiler de canchas, futbol 11, futbol 9, futbol 7, canchas de fubol">
     <title>LaColmena - Contacto</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Css stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- shortcut icon -->
+    <link rel="shortcut icon" href="../images/logo_marca_blanco.png">
+    <!-- box Icon -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="../images/logo_colmena_blanco.png">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -44,28 +51,54 @@
         </nav>
     </header>
 
-    <main class="row justify-content-center">
-        <section class="container-fluid" style="padding: 0;">
+    <main>
+        <div class="container_contacto">
             <h1>Contacto</h1>
-            <div class="m-5 text-center">
-                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                <input type="text" class="form-control form__input" id="exampleFormControlInput1"
-                    placeholder="Ingresa tu nombre completo" required>
+            <div class="contacto_tarjeta">
+                <div class="form_contacto">
+                    <h3>Reservas y sugerencias</h3>
+                    <form>
+                        <div class="form-box">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre">
+                        </div>
+                        <div class="form-box">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" id="apellido">
+                        </div>
+                        <div class="form-box">
+                            <label for="mail">Email</label>
+                            <input type="email" name="email" id="mail">
+                        </div>
+                        <div class="form-box">
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" name="telefono" id="telefono">
+                        </div>
+                        <div class="form-box block_form">
+                            <label>Mensaje</label>
+                            <textarea name="message" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="form-box block_form">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="info_contacto">
+                    <h4>Mas informacion</h4>
+                    <ul>
+                        <li><i class='bx bx-phone'></i>(011) 4242-4242</li>
+                        <li><i class='bx bx-map'></i>Av. La Plata 123, Quilmes Oeste</li>
+                    </ul>
+                    <p>
+                        No presentarse al establecimiento sin confirmacion de reserva.<br><br>
+                        En caso de no recibir confirmacion de reserva, comunicarse telefonicamente.
+                    </p>
+                    <p>
+                        LaColmena Futbol® se reserva el derecho de admision y permanencia.
+                    </p>
+                </div>
             </div>
-            <div class="m-5 text-center">
-                <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control form__input" id="exampleFormControlInput1"
-                    placeholder="Ingresa tu email" required>
-            </div>
-            <div class="m-5 text-center">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control form__input" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Escribe tu reserva/sugerencia aqui..."></textarea>
-            </div>
-            <div class="mb-3 btn__section">
-                <button type="button" class="btn btn-outline-secondary">Enviar</button>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="row justify-content-around">

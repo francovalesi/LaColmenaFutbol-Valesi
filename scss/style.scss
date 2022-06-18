@@ -142,8 +142,82 @@ h1 {
 }
 
 /* Estilo para contactos.html */
-.btn__section {
-    text-align: center;
+.container_contacto {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+
+    .contacto_tarjeta {
+        box-shadow: 0 0 20px 5px #90BE6D;
+        color: black;
+
+        * {
+            padding: 1em;
+        }
+
+        .form_contacto {
+            background: white;
+            font-family: $font-titles;
+
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .form-box {
+                    margin: 0;
+                    padding: 1em;
+
+                    button,
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: .7em;
+                        border: none;
+                        background: none;
+                        outline: none;
+                        border-bottom: 1px solid black;
+                    }
+
+                    button {
+                        background: #63C132;
+                        color: black;
+                        border: 0;
+                        text-transform: uppercase;
+                        padding: 1em;
+                        font-weight: 600;
+                    }
+                }
+
+                .block_form {
+                    grid-column: 1 / 3;
+                }
+            }
+        }
+
+        .info_contacto {
+            color: white;
+            background: #222222;
+            font-family: $font-text;
+            font-weight: 900;
+
+            h4,
+            ul,
+            p {
+                text-align: center;
+                margin: 0 0 1rem 0;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    padding: .3em;
+                }
+            }
+        }
+    }
 }
 
 /* Estilos para galeria.html */
@@ -345,13 +419,23 @@ footer {
     }
 
     /* Estilo para contactos.html */
-    .form__input {
-        width: 500px;
-        margin: 0 auto;
-    }
+    .contacto_tarjeta {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
 
-    .btn__section {
-        text-align: center;
+        * {
+            padding: 2em;
+        }
+
+        .info_contacto {
+
+            h4,
+            ul,
+            p {
+                padding: 1em;
+                text-align: left;
+            }
+        }
     }
 
     /* Estilos para galeria.html */
