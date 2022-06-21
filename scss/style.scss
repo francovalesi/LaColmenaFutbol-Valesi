@@ -58,8 +58,11 @@ main {
     background-color: $color-secundario;
     margin: 0;
 
-    .banner__main {
-        @include sizes(100%, auto);
+    .banner__main{
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-size: center center;
     }
 }
 
@@ -488,8 +491,15 @@ footer {
         }
     }
 
-    .banner__main:hover {
-        filter: saturate(180%);
+    .banner__main{
+        width: 100%;
+        height: auto;
+        background-size: cover;
+        background-size: center center;
+
+        &:hover {
+            filter: saturate(180%);
+        }
     }
 
     /* estilos para eventos.html */
