@@ -42,8 +42,11 @@ header {
 main {
   background-color: ghostwhite;
   margin: 0; }
-  main .banner__main {
-    display: none; }
+  main section .banner__main {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center; }
 
 h1 {
   font-family: "Hammersmith One", sans-serif;
