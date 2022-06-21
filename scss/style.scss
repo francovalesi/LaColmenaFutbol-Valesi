@@ -9,35 +9,54 @@
 
 body {
     display: grid;
-    min-width: 100%;
+    width: 100%;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
 
 /* Estilos para el header y logo de marca*/
-.navbar__header {
-    background-color: $color-principal;
-    color: #000;
 
-    .container__navbar {
-        align-items: center;
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #90BE6D;
+    align-items: center;
+    padding: 5px;
+
+    .logo img {
+        height: 100px;
     }
 
-    .links__navbar {
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
-        text-decoration: underline;
-    }
+    .menu__nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
 
-    .logo-marca {
-        @include sizes(150px, 150px);
+        .link__nav a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Hammersmith One', sans-serif;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        .nosotros_link a:link,
+        .nosotros_link a:visited {
+            text-decoration: map-get($estilos, tDecoration);
+            border-radius: 50%;
+            background-color: whitesmoke;
+        }
     }
 }
 
 /* estilos para el titulo, los parrafos y las imagenes*/
 main {
     background-color: $color-secundario;
+    margin: 0;
 
     .banner__main {
         @include sizes(100%, auto);
@@ -83,7 +102,17 @@ h1 {
     }
 }
 
-/* Estilos para cards */
+/* Estilos para cards y canchas.html */
+.menu__nav {
+
+    .canchas_link a:link,
+    .canchas_link a:visited {
+        text-decoration: map-get($estilos, tDecoration);
+        border-radius: 50%;
+        background-color: whitesmoke;
+    }
+}
+
 .card__section {
     background-color: $color-principal;
     width: 380px;
@@ -114,6 +143,16 @@ h1 {
 }
 
 /* Estilos para eventos.html */
+.menu__nav {
+
+    .eventos_link a:link,
+    .eventos_link a:visited {
+        text-decoration: map-get($estilos, tDecoration);
+        border-radius: 50%;
+        background-color: whitesmoke;
+    }
+}
+
 .title_eventos {
     font-family: $font-titles;
     font-size: 25px;
@@ -142,11 +181,25 @@ h1 {
 }
 
 /* Estilo para contactos.html */
+.menu__nav {
+
+    .contacto_link a:link,
+    .contacto_link a:visited {
+        text-decoration: map-get($estilos, tDecoration);
+        border-radius: 50%;
+        background-color: whitesmoke;
+    }
+}
+
 .container_contacto {
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
     padding: 1.5em;
+
+    h1 {
+        margin-bottom: .5em;
+    }
 
     .contacto_tarjeta {
         box-shadow: 0 0 20px 5px #90BE6D;
@@ -221,6 +274,16 @@ h1 {
 }
 
 /* Estilos para galeria.html */
+.menu__nav {
+
+    .galeria_link a:link,
+    .galeria_link a:visited {
+        text-decoration: map-get($estilos, tDecoration);
+        border-radius: 50%;
+        background-color: whitesmoke;
+    }
+}
+
 .gallery {
     padding-bottom: 3em;
     padding-top: 1em;
@@ -287,25 +350,60 @@ h1 {
 
 /* Estilos para el footer y enlace a redes sociales */
 footer {
-    background-color: $color-principal;
     margin-top: auto;
+    background-color: $color-principal;
+    @include sizes(100%, auto);
+    font-family: $font-titles;
+    padding-top: 10px;
+    color: black;
 
-    .footer__redes {
+    .redes__footer {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
-        margin: 10px 0px 0px 5px;
-        padding-bottom: 5px;
-        font-size: 35px;
+        text-align: center;
+
+        h4 {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .social_list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0 10px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    i {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
     }
 
-    .footer__copy {
+    .copy__footer {
+        background-color: #87B37A;
+        width: 100%;
+        text-align: center;
+
         p {
-            font-family: $font-titles;
-            margin: 10px;
-            font-size: 12px;
-            font-weight: 900;
-            text-align: center;
+            font-size: 14px;
+            word-spacing: 2px;
             font-weight: bold;
+            margin: 0;
         }
     }
 }
@@ -314,23 +412,38 @@ footer {
 
     body {
         display: grid;
-        min-width: 100%;
+        width: 100%;
         min-height: 100vh;
         grid-template-rows: auto 1fr auto;
     }
 
     /* Estilos para la barra de navegacion */
-    .container__navbar {
-        .links__navbar {
-            color: black;
-            font-weight: bold;
-            font-size: 28px;
-            text-decoration: none;
-            padding: 1px;
-            margin: 5px;
+    header {
+        flex-direction: row;
+        justify-content: space-around;
 
-            &:hover {
-                text-decoration: underline;
+        .logo img {
+            height: 120px;
+        }
+
+        .menu__nav {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+
+            .link__nav a {
+                padding: 15px;
+                display: block;
+                font-size: 20px;
+
+                &:hover {
+                    border-radius: 50%;
+                    background-color: whitesmoke;
+                    text-decoration: map-get($estilos, tDecoration);
+                    transition: all .3s;
+                }
             }
         }
     }
@@ -497,35 +610,28 @@ footer {
 
     /* Estilos para el footer y redes sociales */
     footer {
-        background-color: $color-principal;
-        margin-top: auto;
-
-        .footer__redes {
-            display: flex;
-            flex-direction: row;
-            font-size: 45px;
-            margin-left: 50px;
-
-            i {
-                padding: 15px;
-            }
-
-            @each $redSocial,
-            $valor in $colores-redes {
-                .btn--#{$redSocial}:hover {
-                    color: $valor;
-                }
-            }
-        }
-
-        .footer__copy {
-            p {
-                font-family: $font-text;
-                margin-right: 50px;
+        .redes__footer {
+            h4 {
                 font-size: 20px;
-                font-weight: 900;
-                text-align: right;
-                font-weight: bold;
+            }
+
+            .social_list {
+                li {
+                    margin: 0 25px;
+
+                    a {
+                        i {
+                            font-size: 50px;
+                        }
+                    }
+                }
+
+                @each $redSocial,
+                $valor in $colores-redes {
+                    .btn--#{$redSocial}:hover {
+                        color: $valor;
+                    }
+                }
             }
         }
     }

@@ -5,28 +5,43 @@
 
 body {
   display: grid;
-  min-width: 100%;
+  width: 100%;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto; }
 
 /* Estilos para el header y logo de marca*/
-.navbar__header {
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
   background-color: #90BE6D;
-  color: #000; }
-  .navbar__header .container__navbar {
-    align-items: center; }
-  .navbar__header .links__navbar {
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: underline; }
-  .navbar__header .logo-marca {
-    width: 150px;
-    height: 150px; }
+  align-items: center;
+  padding: 5px; }
+  header .logo img {
+    height: 100px; }
+  header .menu__nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0; }
+    header .menu__nav .link__nav a {
+      text-decoration: none;
+      color: black;
+      font-family: 'Hammersmith One', sans-serif;
+      font-weight: bold;
+      padding: 5px; }
+    header .menu__nav .nosotros_link a:link,
+    header .menu__nav .nosotros_link a:visited {
+      text-decoration: underline;
+      border-radius: 50%;
+      background-color: whitesmoke; }
 
 /* estilos para el titulo, los parrafos y las imagenes*/
 main {
-  background-color: ghostwhite; }
+  background-color: ghostwhite;
+  margin: 0; }
   main .banner__main {
     width: 100%;
     height: auto; }
@@ -65,7 +80,13 @@ h1 {
     padding: 10px;
     margin-bottom: 10px; }
 
-/* Estilos para cards */
+/* Estilos para cards y canchas.html */
+.menu__nav .canchas_link a:link,
+.menu__nav .canchas_link a:visited {
+  text-decoration: underline;
+  border-radius: 50%;
+  background-color: whitesmoke; }
+
 .card__section {
   background-color: #90BE6D;
   width: 380px;
@@ -87,6 +108,12 @@ h1 {
       text-decoration: underline; }
 
 /* Estilos para eventos.html */
+.menu__nav .eventos_link a:link,
+.menu__nav .eventos_link a:visited {
+  text-decoration: underline;
+  border-radius: 50%;
+  background-color: whitesmoke; }
+
 .title_eventos {
   font-family: "Hammersmith One", sans-serif;
   font-size: 25px;
@@ -108,11 +135,19 @@ h1 {
     line-height: 1.6; }
 
 /* Estilo para contactos.html */
+.menu__nav .contacto_link a:link,
+.menu__nav .contacto_link a:visited {
+  text-decoration: underline;
+  border-radius: 50%;
+  background-color: whitesmoke; }
+
 .container_contacto {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   padding: 1.5em; }
+  .container_contacto h1 {
+    margin-bottom: .5em; }
   .container_contacto .contacto_tarjeta {
     box-shadow: 0 0 20px 5px #90BE6D;
     color: black; }
@@ -162,6 +197,12 @@ h1 {
           padding: .3em; }
 
 /* Estilos para galeria.html */
+.menu__nav .galeria_link a:link,
+.menu__nav .galeria_link a:visited {
+  text-decoration: underline;
+  border-radius: 50%;
+  background-color: whitesmoke; }
+
 .gallery {
   padding-bottom: 3em;
   padding-top: 1em;
@@ -220,38 +261,75 @@ h1 {
 
 /* Estilos para el footer y enlace a redes sociales */
 footer {
+  margin-top: auto;
   background-color: #90BE6D;
-  margin-top: auto; }
-  footer .footer__redes {
+  width: 100%;
+  height: auto;
+  font-family: "Hammersmith One", sans-serif;
+  padding-top: 10px;
+  color: black; }
+  footer .redes__footer {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    margin: 10px 0px 0px 5px;
-    padding-bottom: 5px;
-    font-size: 35px; }
-  footer .footer__copy p {
-    font-family: "Hammersmith One", sans-serif;
-    margin: 10px;
-    font-size: 12px;
-    font-weight: 900;
-    text-align: center;
-    font-weight: bold; }
+    text-align: center; }
+    footer .redes__footer h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0; }
+    footer .redes__footer .social_list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0; }
+      footer .redes__footer .social_list li {
+        margin: 0 10px; }
+        footer .redes__footer .social_list li a {
+          text-decoration: none;
+          color: black; }
+          footer .redes__footer .social_list li a i {
+            font-size: 35px; }
+  footer .copy__footer {
+    background-color: #87B37A;
+    width: 100%;
+    text-align: center; }
+    footer .copy__footer p {
+      font-size: 14px;
+      word-spacing: 2px;
+      font-weight: bold;
+      margin: 0; }
 
 @media screen and (min-width: 1024px) {
   body {
     display: grid;
-    min-width: 100%;
+    width: 100%;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto; }
   /* Estilos para la barra de navegacion */
-  .container__navbar .links__navbar {
-    color: black;
-    font-weight: bold;
-    font-size: 28px;
-    text-decoration: none;
-    padding: 1px;
-    margin: 5px; }
-    .container__navbar .links__navbar:hover {
-      text-decoration: underline; }
+  header {
+    flex-direction: row;
+    justify-content: space-around; }
+    header .logo img {
+      height: 120px; }
+    header .menu__nav {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0; }
+      header .menu__nav .link__nav a {
+        padding: 15px;
+        display: block;
+        font-size: 20px; }
+        header .menu__nav .link__nav a:hover {
+          border-radius: 50%;
+          background-color: whitesmoke;
+          text-decoration: underline;
+          transition: all .3s; }
   /* se estila y acomodan las imagenes al lado del texto */
   .article__container {
     display: flex;
@@ -381,28 +459,17 @@ footer {
       height: 100%;
       object-fit: cover; }
   /* Estilos para el footer y redes sociales */
-  footer {
-    background-color: #90BE6D;
-    margin-top: auto; }
-    footer .footer__redes {
-      display: flex;
-      flex-direction: row;
-      font-size: 45px;
-      margin-left: 50px; }
-      footer .footer__redes i {
-        padding: 15px; }
-      footer .footer__redes .btn--facebook:hover {
-        color: #3b5998; }
-      footer .footer__redes .btn--twitter:hover {
-        color: #00acee; }
-      footer .footer__redes .btn--instagram:hover {
-        color: #dd2a7b; }
-      footer .footer__redes .btn--email:hover {
-        color: #BBDA12; }
-    footer .footer__copy p {
-      font-family: "Poppins", sans-serif;
-      margin-right: 50px;
-      font-size: 20px;
-      font-weight: 900;
-      text-align: right;
-      font-weight: bold; } }
+  footer .redes__footer h4 {
+    font-size: 20px; }
+  footer .redes__footer .social_list li {
+    margin: 0 25px; }
+    footer .redes__footer .social_list li a i {
+      font-size: 50px; }
+  footer .redes__footer .social_list .btn--facebook:hover {
+    color: #3b5998; }
+  footer .redes__footer .social_list .btn--twitter:hover {
+    color: #00acee; }
+  footer .redes__footer .social_list .btn--instagram:hover {
+    color: #dd2a7b; }
+  footer .redes__footer .social_list .btn--email:hover {
+    color: #BBDA12; } }
