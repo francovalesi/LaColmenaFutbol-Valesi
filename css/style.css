@@ -43,10 +43,7 @@ main {
   background-color: ghostwhite;
   margin: 0; }
   main .banner__main {
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-size: center center; }
+    display: none; }
 
 h1 {
   font-family: "Hammersmith One", sans-serif;
@@ -362,12 +359,13 @@ footer {
       height: 300px;
       padding: 10px;
       margin-bottom: 10px; }
-  .banner__main {
+  section .banner__main {
+    display: inline-block;
     width: 100%;
     height: auto;
     background-size: cover;
     background-size: center center; }
-    .banner__main:hover {
+    section .banner__main:hover {
       filter: saturate(180%); }
   /* estilos para eventos.html */
   .container_eventos {

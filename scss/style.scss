@@ -58,11 +58,8 @@ main {
     background-color: $color-secundario;
     margin: 0;
 
-    .banner__main{
-        width: 100%;
-        height: auto;
-        background-size: cover;
-        background-size: center center;
+    .banner__main {
+        display: none;
     }
 }
 
@@ -491,14 +488,17 @@ footer {
         }
     }
 
-    .banner__main{
-        width: 100%;
-        height: auto;
-        background-size: cover;
-        background-size: center center;
+    section {
+        .banner__main {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-size: center center;
 
-        &:hover {
-            filter: saturate(180%);
+            &:hover {
+                filter: saturate(180%);
+            }
         }
     }
 
