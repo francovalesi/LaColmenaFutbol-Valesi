@@ -53,31 +53,37 @@ h1 {
   font-size: 35px;
   padding-top: 20px; }
 
-.article__parrafo {
-  font-family: "Poppins", sans-serif;
-  font-size: 17px;
-  font-weight: 900;
+.article__container .article__parrafo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  line-height: 1.6;
-  margin: 20px 20px;
-  padding: 20px 12px; }
+  margin: 0 30px; }
+  .article__container .article__parrafo p {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.6; }
 
-.article__images {
+.article__container .article__images {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px; }
-  .article__images img {
-    width: 450px;
-    height: 300px;
-    padding: 10px;
+  .article__container .article__images img {
+    width: 320px;
+    height: 230px;
     margin-bottom: 10px;
-    border-radius: 5%; }
-  .article__images iframe {
-    width: 450px;
-    height: 300px;
-    padding: 10px;
-    margin-bottom: 10px; }
+    border-radius: 10%;
+    border: 2px solid black; }
+
+.article__container iframe {
+  width: 450px;
+  height: 300px;
+  padding: 10px;
+  margin-bottom: 10px; }
 
 /* Estilos para cards y canchas.html */
 .menu__nav .canchas_link a:link,
@@ -339,26 +345,23 @@ footer {
       margin: 20px 20px;
       padding: 20px 12px;
       width: 35%; }
-  .article__images {
-    display: inline-block; }
-    .article__images img {
-      width: 450px;
-      height: 300px;
-      padding: 10px;
-      border-radius: 5%;
-      transition: all .5s; }
-      .article__images img:hover {
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        box-shadow: 0px 0px 15px 15px #90BE6D;
-        -webkit-box-shadow: 0px 0px 15px 15px #90BE6D;
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg); }
-    .article__images iframe {
-      width: 450px;
-      height: 300px;
-      padding: 10px;
-      margin-bottom: 10px; }
+      .article__container .article__parrafo p {
+        font-size: 18px; }
+    .article__container .article__images {
+      display: inline-block; }
+      .article__container .article__images img {
+        width: 450px;
+        height: 300px;
+        margin: 10px;
+        border-radius: 5%;
+        transition: all .5s; }
+        .article__container .article__images img:hover {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          box-shadow: 0px 0px 15px 15px #90BE6D;
+          -webkit-box-shadow: 0px 0px 15px 15px #90BE6D;
+          transform: rotate(360deg);
+          -webkit-transform: rotate(360deg); }
   section .banner__main {
     display: inline-block;
     width: 100%;
