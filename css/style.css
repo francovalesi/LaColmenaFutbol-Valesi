@@ -182,7 +182,8 @@ h1 {
         grid-template-columns: 1fr 1fr; }
         .container_contacto .contacto_tarjeta .form_contacto form .form-box {
           margin: 0;
-          padding: 1em; }
+          padding: 1em;
+          grid-column: 1 / 3; }
           .container_contacto .contacto_tarjeta .form_contacto form .form-box button,
           .container_contacto .contacto_tarjeta .form_contacto form .form-box input,
           .container_contacto .contacto_tarjeta .form_contacto form .form-box textarea {
@@ -199,8 +200,6 @@ h1 {
             text-transform: uppercase;
             padding: 1em;
             font-weight: 600; }
-        .container_contacto .contacto_tarjeta .form_contacto form .block_form {
-          grid-column: 1 / 3; }
     .container_contacto .contacto_tarjeta .info_contacto {
       color: white;
       background: #222222;
@@ -230,11 +229,10 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 160px;
-  grid-template-areas: "img1 img1" "img1 img1" "img2 img3" "img2 img3" "img4 img4" "img4 img4" "img5 img5" "img5 img5" "img6 img7" "img8 img8" "img9 img9" "img9 img9" "img10 img10" "img10 img10";
+  grid-template-areas: "img1 img1" "img1 img1" "img2 img3" "img2 img3" "img4 img4" "img4 img4" "img5 img5" "img5 img5" "img6 img7" "img8 img8" "img9 img9" "img9 img9" "img10 img10" "img10 img10" "img11 img11" "img11 img11";
   gap: .8em; }
   .gallery .gallery_picture {
     position: relative;
-    cursor: pointer;
     overflow: hidden; }
     .gallery .gallery_picture::before {
       content: "Visitanos!";
@@ -275,6 +273,8 @@ h1 {
     grid-area: img9; }
   .gallery .gallery_picture--g10 {
     grid-area: img10; }
+  .gallery .gallery_picture--g11 {
+    grid-area: img11; }
   .gallery .gallery_img {
     width: 100%;
     height: 100%;
@@ -372,12 +372,10 @@ footer {
         border-radius: 5%;
         transition: all .5s; }
         .article__container .article__images img:hover {
-          border-radius: 50%;
-          -webkit-border-radius: 50%;
-          box-shadow: 0px 0px 15px 15px #90BE6D;
-          -webkit-box-shadow: 0px 0px 15px 15px #90BE6D;
-          transform: rotate(360deg);
-          -webkit-transform: rotate(360deg); }
+          -webkit-transform: rotateY(180deg);
+          -webkit-transform-style: preserve-3d;
+          transform: rotateY(180deg);
+          transform-style: preserve-3d; }
   section .banner__main {
     display: inline-block;
     width: 100%;
@@ -399,7 +397,9 @@ footer {
       .container_eventos .image_eventos img {
         display: inline-block;
         width: 550px;
-        height: 700px; }
+        height: 700px;
+        border: 2px solid black;
+        border-radius: 5%; }
     .container_eventos .article__eventos {
       display: flex;
       flex-direction: column;
@@ -428,60 +428,8 @@ footer {
       text-align: left; }
   /* Estilos para galeria.html */
   .gallery {
-    padding-bottom: 3em;
-    padding-top: 1em;
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 160px;
-    grid-template-areas: "img1 img1 img2 img3" "img1 img1 img4 img4" "img5 img5 img6 img7" "img5 img5 img8 img8" "img9 img9 img10 img10" "img9 img9 img10 img10";
-    gap: .8em; }
-    .gallery .gallery_picture {
-      position: relative;
-      cursor: pointer;
-      overflow: hidden; }
-      .gallery .gallery_picture::before {
-        content: "Visitanos!";
-        font-family: "Hammersmith One", sans-serif;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: #90BE6D;
-        opacity: 0.7;
-        transform: scale(0);
-        transition: transform .4s;
-        color: black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem; }
-      .gallery .gallery_picture:hover::before {
-        transform: scale(1) rotate(360deg); }
-    .gallery .gallery_picture--g1 {
-      grid-area: img1; }
-    .gallery .gallery_picture--g2 {
-      grid-area: img2; }
-    .gallery .gallery_picture--g3 {
-      grid-area: img3; }
-    .gallery .gallery_picture--g4 {
-      grid-area: img4; }
-    .gallery .gallery_picture--g5 {
-      grid-area: img5; }
-    .gallery .gallery_picture--g6 {
-      grid-area: img6; }
-    .gallery .gallery_picture--g7 {
-      grid-area: img7; }
-    .gallery .gallery_picture--g8 {
-      grid-area: img8; }
-    .gallery .gallery_picture--g9 {
-      grid-area: img9; }
-    .gallery .gallery_picture--g10 {
-      grid-area: img10; }
-    .gallery .gallery_img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    grid-template-areas: "img1 img1 img2 img3" "img1 img1 img2 img4" "img5 img5 img2 img6" "img5 img5 img7 img6" "img8 img8 img9 img9" "img8 img8 img9 img9" "img10 img10 img11 img11" "img10 img10 img11 img11" "img10 img10 img11 img11"; }
   /* Estilos para el footer y redes sociales */
   footer .redes__footer h4 {
     font-size: 20px; }
