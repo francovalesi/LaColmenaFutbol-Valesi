@@ -122,25 +122,38 @@ h1 {
   border-radius: 50%;
   background-color: whitesmoke; }
 
-.title_eventos {
-  font-family: "Hammersmith One", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  margin: 15px;
-  text-align: center; }
-
 .image_eventos img {
   display: none; }
 
-.parrafo_eventos {
+.article__eventos .parrafo_eventos {
   margin: 20px 20px;
   padding: 20px 12px; }
-  .parrafo_eventos p {
+  .article__eventos .parrafo_eventos .subtitle_eventos {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center; }
+  .article__eventos .parrafo_eventos p {
     font-family: "Poppins", sans-serif;
     font-size: 17px;
     font-weight: 900;
     text-align: center;
     line-height: 1.6; }
+  .article__eventos .parrafo_eventos .btn__eventos {
+    background-color: #63C132;
+    border: none;
+    color: black;
+    font-weight: bold; }
+
+.article__eventos .list__eventos ul {
+  list-style: none;
+  text-align: left; }
+  .article__eventos .list__eventos ul li {
+    padding-bottom: 1rem;
+    font-family: "Hammersmith One", sans-serif; }
+    .article__eventos .list__eventos ul li i {
+      font-size: 2em;
+      vertical-align: middle; }
 
 /* Estilo para contactos.html */
 .menu__nav .contacto_link a:link,
@@ -378,9 +391,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-    .container_eventos .title_eventos {
-      display: inline-block;
-      text-align: start; }
     .container_eventos .image_eventos {
       display: inline-block;
       width: 600px;
@@ -394,14 +404,17 @@ footer {
       display: flex;
       flex-direction: column;
       width: 50%; }
-    .container_eventos .parrafo_eventos {
-      font-family: "Poppins", sans-serif;
-      text-align: left;
-      font-size: 17px;
-      font-weight: 900;
-      line-height: 1.6;
-      margin: 20px 20px;
-      padding: 20px 12px; }
+      .container_eventos .article__eventos .parrafo_eventos .subtitle_eventos {
+        display: inline-block;
+        text-align: start; }
+      .container_eventos .article__eventos .parrafo_eventos p {
+        font-weight: 900;
+        text-align: left; }
+      .container_eventos .article__eventos .parrafo_eventos .btn__eventos {
+        background-color: #63C132;
+        border: none;
+        color: black;
+        font-weight: bold; }
   /* Estilo para contactos.html */
   .contacto_tarjeta {
     display: grid;

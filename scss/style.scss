@@ -169,30 +169,56 @@ h1 {
     }
 }
 
-.title_eventos {
-    font-family: $font-titles;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 15px;
-    text-align: center;
-}
-
 .image_eventos {
     img {
         display: none;
     }
+
 }
 
-.parrafo_eventos {
-    margin: 20px 20px;
-    padding: 20px 12px;
+.article__eventos {
+    .parrafo_eventos {
+        margin: 20px 20px;
+        padding: 20px 12px;
 
-    p {
-        font-family: $font-text;
-        font-size: 17px;
-        font-weight: 900;
-        text-align: center;
-        line-height: map-get($estilos, interlineado);
+        .subtitle_eventos {
+            font-family: $font-titles;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            font-family: $font-text;
+            font-size: 17px;
+            font-weight: 900;
+            text-align: center;
+            line-height: map-get($estilos, interlineado);
+        }
+
+        .btn__eventos {
+            background-color: #63C132;
+            border: none;
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    .list__eventos {
+        ul {
+            list-style: none;
+            text-align: left;
+
+            li {
+                padding-bottom: 1rem;
+                font-family: $font-titles;
+
+                i {
+                    font-size: 2em;
+                    vertical-align: middle;
+                }
+            }
+        }
     }
 }
 
@@ -522,11 +548,6 @@ footer {
         flex-direction: row;
         justify-content: space-around;
 
-        .title_eventos {
-            display: inline-block;
-            text-align: start;
-        }
-
         .image_eventos {
             display: inline-block;
             @include sizes(600px, 800px);
@@ -542,18 +563,28 @@ footer {
             display: flex;
             flex-direction: column;
             width: 50%;
-        }
 
-        .parrafo_eventos {
-            font-family: $font-text;
-            text-align: left;
-            font-size: 17px;
-            font-weight: 900;
-            line-height: map-get($estilos, interlineado);
-            margin: 20px 20px;
-            padding: 20px 12px;
+            .parrafo_eventos {
+        
+                .subtitle_eventos {
+                    display: inline-block;
+                    text-align: start;
+                }
+        
+                p {
+                    font-weight: 900;
+                    text-align: left;
+                }
+        
+                .btn__eventos {
+                    background-color: #63C132;
+                    border: none;
+                    color: black;
+                    font-weight: bold;
+                }
+            }
         }
-    }
+    }   
 
     /* Estilo para contactos.html */
     .contacto_tarjeta {
@@ -642,7 +673,6 @@ footer {
             .social_list {
                 li {
                     margin: 0 25px;
-
                     a {
                         i {
                             font-size: 50px;
