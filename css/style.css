@@ -354,13 +354,14 @@ footer {
   /* se estila y acomodan las imagenes al lado del texto */
   .article__container {
     display: flex;
-    justify-content: space-around; }
+    text-align: center;
+    align-items: center; }
     .article__container .article__parrafo {
       display: inline-block;
       text-align: left;
       margin: 20px 20px;
       padding: 20px 12px;
-      width: 35%; }
+      width: 40%; }
       .article__container .article__parrafo p {
         font-size: 18px; }
     .article__container .article__images {
